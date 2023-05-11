@@ -25,12 +25,16 @@
 
         <!--Color Css-->
         <link class="site-color" rel="stylesheet" href="css/blue-color.css">
+        <link rel="stylesheet" href="css/mycss.css">
 
         <!--Modernizr Js-->
         <script src="js/modernizr.js"></script>
 
         <!--Favicons-->
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122650090-3"></script>
@@ -168,28 +172,60 @@
         <div class="blog-container">
             <div class="row">
 
-                <!--Blog Heading Start-->
-                <div class="blog-heading col-md-8 offset-md-2">
-                    <span class="cat"></span>
-                    <h1>Welcome to my blog</h1>
-                    <span class="blog-date">January 20, 2022</span>
-                </div>
-                <!--Blog Heading Start-->
-
                 <!--Blog Content Start-->
-                <div class="blog-content col-md-10 offset-md-1">
-                    <p>Consectetur rerum veniam vitae sequi voluptatibus unde soluta dolorum. Sint maxime ducimus tenetur vitae corrupti saepe. Veniam sit ea aliquid odit officiis. Quisquam at labore eum commodi in eius In quisquam a a eaque fuga? Debitis magnam deserunt libero voluptates esse at possimus? Voluptatum voluptates exercitationem voluptatum accusantium doloremque nihil, nihil molestias voluptatibus, minus nostrum, aliquid Quisquam neque fugiat quos veniam facere Dicta eaque laboriosam ut voluptas ipsum Officiis nisi maxime soluta optio ipsum quam Dolores aperiam explicabo sed quas unde laborum molestiae. Porro cum incidunt enim minus nisi excepturi rerum! Exercitationem quia excepturi reiciendis illum velit! Consequatur tempora nihil </p>
-                    <p>
-                        Sit exercitationem accusamus repudiandae libero natus vero aut Consectetur magni totam sint animi expedita? Eos consequatur facilis corrupti voluptatibus asperiores dolorum vitae ipsa laudantium repellat Voluptates voluptates corporis illum ut asperiores possimus officiis! Laborum rerum eaque minus harum doloremque debitis Ducimus sed commodi commodi illo aliquam. Magnam ipsa blanditiis blanditiis veniam aut Magni unde voluptates culpa dicta placeat! Incidunt delectus beatae excepturi perspiciatis libero praesentium illo Atque sit asperiores unde dolorem cupiditate, nostrum Alias illum voluptate eos commodi modi? Minus est fugiat labore earum obcaecati, omnis. Dicta fugit quod harum eius atque? Exercitationem impedit deleniti quidem voluptas eum cupiditate Consectetur
-                    </p>
-                    <blockquote>
-                        Consectetur omnis eveniet possimus est necessitatibus. Dolorum magnam officiis ad fugit cumque? Voluptatibus laboriosam incidunt voluptatum beatae dignissimos, nostrum iusto error Optio quam modi adipisci cumque delectus Voluptates iusto doloremque.
-                    </blockquote>
-                    <p>
-                        Dolor amet culpa esse cum in? Id ab neque ipsa sapiente impedit doloremque quod. Velit veniam in odio voluptatem doloribus Minus laborum voluptates sed ea vel? Aspernatur in quos nulla veniam tempore In quibusdam reprehenderit maiores iste ab Est quae magni nemo repudiandae soluta? Eius qui veniam voluptatem iure molestiae
-                    </p>
-                </div>
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Section 1
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Section 2
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Section 3
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!--Blog Content End-->
+
+
             </div>
         </div>
 
