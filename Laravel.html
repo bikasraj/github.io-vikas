@@ -169,27 +169,26 @@
               structure and organize web applications. <br>
               It separates the application logic into <b>three interconnected components:<b> the Model, the View, and the Controller.
               Each component has a specific responsibility and works together to provide a robust and maintainable codebase.
-              <ul>  <b>Model:</b>
-                  <il>
-                     
+              <ul> 
+                  <il> Model: <br>
                       The Model represents the data and business logic of the application. 
                       It encapsulates the data storage and retrieval operations, as well as any business rules or validations.<br> 
-                      In Laravel, models are typically represented as classes that extend the base <b>Illuminate\Database\Eloquent\Model </b>class.
+                      In Laravel, models are typically represented as classes that extend the base Illuminate\Database\Eloquent\Model class.
                       Models interact with the underlying database tables and handle tasks such as data retrieval, 
                       data manipulation, and relationships between different entities.
                   </li>
-                  <b>View:</b>
-                  <li> The View is responsible for presenting the application's user interface to the users.
+             
+                  <li> View: The View is responsible for presenting the application's user interface to the users.
                       It receives the data from the Controller and renders it in a format that can be displayed to the user, 
                       such as HTML, JSON, XML, etc. <br>
-                      In Laravel, views are typically created using the <b>Blade templating engine.<b> 
+                      In Laravel, views are typically created using the Blade templating engine.
                       Blade allows you to define reusable templates and includes dynamic content using variables and control structures.
                   
-                  </li><b>Controller:</b>
+                  </li>Controller:
                       <li>The Controller acts as an intermediary between the Model and the View. <br>
                           It receives the user's input and performs the necessary actions to fulfill the request. <br>
                           Controllers handle the application's HTTP requests, retrieve data from the Model, and pass it to the View for rendering.
-                          In Laravel, controllers are implemented as classes that extend the base <b>Illuminate\Routing\Controller</b> class. 
+                          In Laravel, controllers are implemented as classes that extend the base Illuminate\Routing\Controller class. 
                           They consist of methods called actions, which handle specific HTTP requests and interact with the corresponding models and views.
                       </li>  
               
