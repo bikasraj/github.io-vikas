@@ -55,6 +55,11 @@
               margin-bottom: 1rem;
             }
            
+   pre {
+    display: block;
+    font-size: 87.5%;
+    color: #fff;
+}       
         </style>
 
     </head>
@@ -500,13 +505,6 @@
       <h2>Create a New Folder:</h2>
       <p>Create a new folder and name it <code>Example_theme</code>. Ensure that the folder name is in lowercase and doesn't contain any spaces or special characters.</p>
       <p>Your folder structure should look like this:</p>
-        <style>
- pre {
-    display: block;
-    font-size: 87.5%;
-    color: #fff;
-}
-        </style>
       <pre>
 wp-content
    └── themes
@@ -535,7 +533,81 @@ wp-content
     </div>
     <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample">
       <div class="card-body">
-       <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <h1>Create Theme Files</h1>
+  
+  <p>Follow these steps to create the necessary theme files:</p>
+  
+  <ol>
+    <li>
+      <h2>Create style.css:</h2>
+      <p>Create a file named <code>style.css</code> in your theme folder. Open it in a text editor and add the following code:</p>
+      <pre>
+/*
+Theme Name: Example Theme
+Theme URI: http://example.com
+Author: Your Name
+Author URI: http://yourwebsite.com
+Description: Description of your theme.
+Version: 1.0
+*/
+      </pre>
+    </li>
+    
+    <li>
+      <h2>Create index.php:</h2>
+      <p>Create a file named <code>index.php</code> in your theme folder. Open it in a text editor and add the following code:</p>
+      <pre>
+&lt;?php
+get_header();
+?&gt;
+
+<!-- Your HTML content here -->
+
+&lt;?php
+get_footer();
+?&gt;
+      </pre>
+    </li>
+    
+    <li>
+      <h2>Create header.php:</h2>
+      <p>Create a file named <code>header.php</code> in your theme folder. Open it in a text editor and add the following code:</p>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title>&lt;?php wp_title(); ?&gt;&lt;/title&gt;
+    &lt;?php wp_head(); ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;!-- Your header content here --&gt;
+    &lt;/header&gt;
+      </pre>
+    </li>
+    
+    <li>
+      <h2>Create footer.php:</h2>
+      <p>Create a file named <code>footer.php</code> in your theme folder. Open it in a text editor and add the following code:</p>
+      <pre>
+    &lt;footer&gt;
+        &lt;!-- Your footer content here --&gt;
+    &lt;/footer&gt;
+    &lt;?php wp_footer(); ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+    </li>
+    
+    <li>
+      <h2>Create Additional Files:</h2>
+      <p>Based on your theme's structure and requirements, create other necessary files like <code>sidebar.php</code>, <code>single.php</code>, <code>page.php</code>, <code>archive.php</code>, <code>search.php</code>, etc., as needed.</p>
+      <p>Customize these files further with the appropriate HTML, CSS, and PHP code to create your desired theme layout and functionality.</p>
+    </li>
+  </ol>
+    
       </div>
     </div>
   </div>
