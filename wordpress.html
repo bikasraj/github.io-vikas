@@ -603,15 +603,18 @@ get_footer();
     
     <li>
       <h2>Create Additional Files:</h2>
-      <p>Based on your theme's structure and requirements, create other necessary files like <code>sidebar.php</code>, <code>single.php</code>, <code>page.php</code>, <code>archive.php</code>, <code>search.php</code>, etc., as needed.</p>
-      <p>Customize these files further with the appropriate HTML, CSS, and PHP code to create your desired theme layout and functionality.</p>
+      <p>Based on your theme's structure and requirements, create other necessary files like <code>sidebar.php</code>, <code>single.php</code>,
+          <br><code>page.php</code>, <code>archive.php</code>, <code>search.php</code>, etc., as needed.</p>
+      <p>Customize these files further with the appropriate HTML, CSS, and PHP code to create your desired theme<br>
+          layout and functionality.</p>
     </li>
   </ol>
     
           
-          <h2 style="style=" font-size: 30px; color: chartreuse; "">Imporatant Note :</h2>
-          <h2>Basic Usage:</h2>
-  <p>The basic usage of <code>get_header()</code> involves calling the function in your theme's template files, typically in the <code>index.php</code> file or any other template file where you want to display the header. Here's an example of basic usage:</p>
+<h2 style="style=" font-size: 30px; color: chartreuse; "">Imporatant Note :</h2>
+<h2>Basic Usage:</h2>
+  <p>The basic usage of <code>get_header()</code> involves calling the function in your theme's template files, typically in the <br>
+      <code>index.php</code> file or any other template file where you want to display the header. Here's an example of basic usage:</p>
   
   <pre>
     &lt;?php
@@ -622,7 +625,8 @@ get_footer();
   <h2>Advanced Usage:</h2>
   
   <h3>Custom Header Templates:</h3>
-  <p>By default, the <code>get_header()</code> function looks for a file named <code>header.php</code> in your theme directory. However, you can create custom header templates and specify them as arguments in the function call. For example:</p>
+  <p>By default, the <code>get_header()</code> function looks for a file named <code>header.php</code> in your theme directory. <br>
+      However, you can create custom header templates and specify them as arguments in the function call. For example:</p>
   
   <pre>
     &lt;?php
@@ -630,10 +634,12 @@ get_footer();
     ?&gt;
   </pre>
   
-  <p>In this case, WordPress will look for a file named <code>header-custom.php</code> in your theme directory and include it as the header template.</p>
+  <p>In this case, WordPress will look for a file named <code>header-custom.php</code> in your theme directory and include it as the <br>
+      header template.</p>
   
   <h3>Including Specific Header Files:</h3>
-  <p>If you want to include a specific header file directly without relying on the default naming convention, you can pass the complete file path as an argument to <code>get_header()</code>. For example:</p>
+  <p>If you want to include a specific header file directly without relying on the default naming convention, you can pass the <br>
+      complete file path as an argument to <code>get_header()</code>. For example:</p>
   
   <pre>
     &lt;?php
@@ -644,18 +650,23 @@ get_footer();
   <p>This will include the <code>custom-header.php</code> file from the specified path as the header template.</p>
   
   <h3>Header Hooks:</h3>
-  <p>WordPress provides several action hooks that allow you to add or modify content within the header template. You can use these hooks to insert additional elements or customize the default header. Here are a few commonly used hooks:</p>
+  <p>WordPress provides several action hooks that allow you to add or modify content within the header template. You can use these <br>
+      hooks to insert additional elements or customize the default header. Here are a few commonly used hooks:</p>
   
   <pre>
-    <code>wp_head:</code> This hook is placed within the &lt;head&gt;&lt;/head&gt; section of the header template. It's typically used to add additional scripts, stylesheets, or meta tags to the document head.
+    <code>wp_head:</code> This hook is placed within the &lt;head&gt;&lt;/head&gt; section of the header template. It's typically used<br>
+    to add additional scripts, stylesheets, or meta tags to the document head.
     
-    <code>get_header:</code> This hook fires before the header template is included, allowing you to execute custom code or modify variables before the header is rendered.
+    <code>get_header:</code> This hook fires before the header template is included, allowing you to execute custom code or modify<br>
+    variables before the header is rendered.
     
-    <code>wp_body_open:</code> This hook is placed at the beginning of the &lt;body&gt; tag, after the header template. It's useful for adding content that should appear immediately after the opening &lt;body&gt; tag.
+    <code>wp_body_open:</code> This hook is placed at the beginning of the &lt;body&gt; tag, after the header template. It's useful<br>
+    for adding content that should appear immediately after the opening &lt;body&gt; tag.
   </pre>
   
   <h3>Conditional Header Templates:</h3>
-  <p>You can use conditional statements to load different header templates based on specific conditions. This can be helpful when you want to display different headers for different pages or sections of your site. Here's an example:</p>
+  <p>You can use conditional statements to load different header templates based on specific conditions. This can be helpful when you <br>
+      want to display different headers for different pages or sections of your site. Here's an example:</p>
   
   <pre>
     &lt;?php
@@ -669,15 +680,19 @@ get_footer();
     ?&gt;
   </pre>
   
-  <p>In this example, different header templates (<code>header-home.php</code> and <code>header-about.php</code>) will be loaded based on the conditions specified.</p>
+  <p>In this example, different header templates (<code>header-home.php</code> and <code>header-about.php</code>) will be loaded based <br>
+      on the conditions specified.</p>
   
-  <p>By using <code>get_header()</code> and understanding its various usages, you can effectively include header templates and customize them to suit your theme's design and functionality needs.</p>
+  <p>By using <code>get_header()</code> and understanding its various usages, you can effectively include header templates and customize<br>
+      them to suit your theme's design and functionality needs.</p>
           
           
       </div>
     </div>
   </div>
    
+     
+     
    <div class="card">
     <div class="card-header" id="headingThree3">
       <h2 class="mb-0">
