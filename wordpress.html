@@ -832,7 +832,126 @@ get_footer();
     </div>
     <div id="collapsefive5" class="collapse" aria-labelledby="headingfive5" data-parent="#accordionExample">
       <div class="card-body">
-        <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+   <h1>WordPress Template Tags</h1>
+  
+  <div class="code-snippet">
+    <h2>the_title()</h2>
+    <p><?php the_title(); ?></p>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_content()</h2>
+    <div class="post-content">
+      <?php the_content(); ?>
+    </div>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_permalink()</h2>
+    <a href="<?php the_permalink(); ?>">Read More</a>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_date()</h2>
+    <p>Published on <?php the_date(); ?></p>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_author()</h2>
+    <p>Written by <?php the_author(); ?></p>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_post_thumbnail()</h2>
+    <div class="post-thumbnail">
+      <?php the_post_thumbnail(); ?>
+    </div>
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_header()</h2>
+    <?php get_header(); ?>
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_footer()</h2>
+    <?php get_footer(); ?>
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_sidebar()</h2>
+    <?php get_sidebar(); ?>
+  </div>
+
+  <div class="code-snippet">
+    <h2>wp_nav_menu()</h2>
+    <nav>
+      <?php wp_nav_menu(); ?>
+    </nav>
+  </div>
+
+  <div class="code-snippet">
+    <h2>wp_list_categories()</h2>
+    <ul>
+      <?php wp_list_categories(); ?>
+    </ul>
+  </div>
+
+  <div class="code-snippet">
+    <h2>wp_list_pages()</h2>
+    <ul>
+      <?php wp_list_pages(); ?>
+    </ul>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_excerpt()</h2>
+    <div class="post-excerpt">
+      <?php the_excerpt(); ?>
+    </div>
+  </div>
+
+  <div class="code-snippet">
+    <h2>the_tags()</h2>
+    <div class="post-tags">
+      <?php the_tags(); ?>
+    </div>
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_search_form()</h2>
+    <div class="search-form">
+      <?php get_search_form(); ?>
+    </div>
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_template_directory_uri()</h2>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_stylesheet_directory_uri()</h2>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/custom.css">
+  </div>
+
+  <div class="code-snippet">
+    <h2>get_post_meta()</h2>
+    <?php
+      $meta_value = get_post_meta(get_the_ID(), 'meta_key', true);
+      echo $meta_value;
+    ?>
+  </div>
+
+  <div class="code-snippet">
+    <h2>wp_enqueue_script()</h2>
+    <?php wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true); ?>
+  </div>
+
+  <div class="code-snippet">
+    <h2>wp_enqueue_style()</h2>
+    <?php wp_enqueue_style('custom-style', get_stylesheet_directory_uri() . '/css/custom.css'); ?>
+  </div>    
       </div>
     </div>
   </div>
