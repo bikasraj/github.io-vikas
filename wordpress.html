@@ -708,7 +708,62 @@ get_footer();
     </div>
     <div id="collapseThree3" class="collapse" aria-labelledby="headingThree3" data-parent="#accordionExample">
       <div class="card-body">
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      <h1>Enqueue Stylesheet and Scripts - Basic to Advanced</h1>
+  
+  <h2>Basic Usage:</h2>
+  <p>The basic usage involves two main functions: <code>wp_enqueue_style()</code> for stylesheets and <code>wp_enqueue_script()</code> for scripts. Here's an example of how to enqueue a stylesheet and a script in your theme's <code>functions.php</code> file:</p>
+  
+  <pre>
+    function example_enqueue_scripts() {
+        wp_enqueue_style('example-style', get_stylesheet_uri());
+        wp_enqueue_script('example-script', get_template_directory_uri() . '/js/example-script.js', array('jquery'), '1.0', true);
+    }
+    add_action('wp_enqueue_scripts', 'example_enqueue_scripts');
+  </pre>
+  
+  <h2>Advanced Usage:</h2>
+  
+  <h3>Dependencies:</h3>
+  <p>You can specify dependencies for stylesheets and scripts using the <code>wp_enqueue_style()</code> and <code>wp_enqueue_script()</code> functions. By specifying dependencies, you ensure that the necessary files are loaded before the dependent files. Here's an example:</p>
+  
+  <pre>
+    wp_enqueue_style('example-child-style', get_stylesheet_uri(), array('parent-style'));
+  </pre>
+  
+  <p>In this example, 'example-child-style' is enqueued with 'parent-style' as its dependency. This means that 'parent-style' will be loaded first before 'example-child-style'.</p>
+  
+  <h3>Conditional Enqueueing:</h3>
+  <p>You can enqueue stylesheets and scripts conditionally based on certain conditions using conditional statements. This allows you to load files only when they are needed. Here's an example:</p>
+  
+  <pre>
+    if (is_front_page()) {
+        wp_enqueue_style('example-front-style', get_stylesheet_directory_uri() . '/css/front-style.css');
+    }
+  </pre>
+  
+  <p>In this example, the 'example-front-style' stylesheet is enqueued only if the current page is the front page.</p>
+  
+  <h3>Registering and Enqueueing:</h3>
+  <p>WordPress provides the <code>wp_register_style()</code> and <code>wp_register_script()</code> functions to register stylesheets and scripts before enqueuing them. Registering allows you to define the file's properties and dependencies separately, and then enqueue them later. Here's an example:</p>
+  
+  <pre>
+    function example_register_scripts() {
+        wp_register_style('example-style', get_stylesheet_uri());
+        wp_register_script('example-script', get_template_directory_uri() . '/js/example-script.js', array('jquery'), '1.0', true);
+    }
+
+    function example_enqueue_scripts() {
+        wp_enqueue_style('example-style');
+        wp_enqueue_script('example-script');
+    }
+
+    add_action('wp_enqueue_scripts', 'example_register_scripts');
+    add_action('wp_enqueue_scripts', 'example_enqueue_scripts');
+  </pre>
+  
+  <p>In this example, we first register the stylesheets and scripts in the <code>example_register_scripts()</code> function, defining their properties and dependencies. Then, in the <code>example_enqueue_scripts()</code> function, we enqueue them.</p>
+  
+  <p>By using the appropriate functions and techniques for enqueuing stylesheets and scripts, you can ensure efficient and organized loading of CSS and JavaScript files in your WordPress theme or plugin.</p>
       </div>
     </div>
   </div>
