@@ -975,7 +975,7 @@ function get_custom_posts() {
     </div>
     <div id="collapseseven7" class="collapse" aria-labelledby="headingseven7" data-parent="#accordionExample">
       <div class="card-body">
-       <h3>Basic Customizer Option - Text Field:</h3>
+       <h1>Basic Customizer Option - Text Field:</h1>
 <pre><code class="php">
 function theme_customizer_settings($wp_customize) {
     $wp_customize->add_section('theme_options', array(
@@ -997,7 +997,7 @@ function theme_customizer_settings($wp_customize) {
 add_action('customize_register', 'theme_customizer_settings');
 </code></pre>
 
-<h3>Customizer Option - Color Picker:</h3>
+<h1>Customizer Option - Color Picker:</h1>
 <pre><code class="php">
 function theme_customizer_settings($wp_customize) {
     $wp_customize->add_section('theme_options', array(
@@ -1018,7 +1018,7 @@ function theme_customizer_settings($wp_customize) {
 add_action('customize_register', 'theme_customizer_settings');
 </code></pre>
 
-<h3>Customizer Option - Image Upload:</h3>
+<h1>Customizer Option - Image Upload:</h1>
 <pre><code class="php">
 function theme_customizer_settings($wp_customize) {
     $wp_customize->add_section('theme_options', array(
@@ -1038,7 +1038,7 @@ function theme_customizer_settings($wp_customize) {
 add_action('customize_register', 'theme_customizer_settings');
 </code></pre>
 
-<h3>Customizer Option - Select Dropdown:</h3>
+<h1>Customizer Option - Select Dropdown:</h1>
 <pre><code class="php">
 function theme_customizer_settings($wp_customize) {
     $wp_customize->add_section('theme_options', array(
@@ -1064,7 +1064,7 @@ function theme_customizer_settings($wp_customize) {
 add_action('customize_register', 'theme_customizer_settings');
 </code></pre>
 
-<h3>Customizer Option - Checkbox:</h3>
+<h1>Customizer Option - Checkbox:</h1>
 <pre><code class="php">
 function theme_customizer_settings($wp_customize) {
     $wp_customize->add_section('theme_options', array(
@@ -1100,7 +1100,87 @@ add_action('customize_register', 'theme_customizer_settings');
     </div>
     <div id="collapse99" class="collapse" aria-labelledby="heading99" data-parent="#accordionExample">
       <div class="card-body">
-       <h1>WordPress Performance Optimization -.</h1>
+       <p>A widget in WordPress is a small block of functionality that can be added to widget areas or sidebars in your theme. Widgets are used to add various types of content and features to your website, such as a search bar, recent posts, social media icons, etc.</p>
+
+<p>To create a custom widget in WordPress, you can follow these steps from basic to advanced:</p>
+
+<p>Create a new PHP file for your widget. For example, <code>custom-widget.php</code>.</p>
+
+<pre><code class="language-php">class Custom_Widget extends WP_Widget {
+    // Widget code goes here
+}
+</code></pre>
+
+<p>Inside the class, define the widget's constructor, name, description, and other properties:</p>
+
+<pre><code class="language-php">class Custom_Widget extends WP_Widget {
+    public function __construct() {
+        parent::__construct(
+            'custom_widget',  // Widget ID
+            'Custom Widget',  // Widget name
+            array(
+                'description' => 'This is a custom widget.',
+            )
+        );
+    }
+
+    // Widget code goes here
+}
+</code></pre>
+
+<p>Implement the widget's frontend output by overriding the <code>widget()</code> method:</p>
+
+<pre><code class="language-php">class Custom_Widget extends WP_Widget {
+    // ...
+
+    public function widget($args, $instance) {
+        // Widget output code goes here
+    }
+}
+</code></pre>
+
+<p>The <code>$args</code> parameter contains arguments like widget area before and after widget, widget container classes, etc. The <code>$instance</code> parameter contains the widget settings provided by the user.</p>
+
+<p>Implement the widget's form in the admin area by overriding the <code>form()</code> method:</p>
+
+<pre><code class="language-php">class Custom_Widget extends WP_Widget {
+    // ...
+
+    public function form($instance) {
+        // Widget form code goes here
+    }
+}
+</code></pre>
+
+<p>The <code>$instance</code> parameter contains the widget settings provided by the user.</p>
+
+<p>Implement the widget's update method to save the settings when the user submits the form:</p>
+
+<pre><code class="language-php">class Custom_Widget extends WP_Widget {
+    // ...
+
+    public function update($new_instance, $old_instance) {
+        // Update widget settings code goes here
+    }
+}
+</code></pre>
+
+<p>The <code>$new_instance</code> parameter contains the new settings provided by the user, and the <code>$old_instance</code> parameter contains the previous settings.</p>
+
+<p>Finally, register your custom widget by calling the <code>register_widget()</code> function:</p>
+
+<pre><code class="language-php">function register_custom_widget() {
+    register_widget('Custom_Widget');
+}
+add_action('widgets_init', 'register_custom_widget');
+</code></pre>
+
+<p>This function should be hooked to the <code>'widgets_init'</code> action to ensure it is registered properly.</p>
+
+<p>That's the basic structure of creating a custom widget. You can add additional functionality, options, and customizations as needed. Remember to include the <code>custom-widget.php</code> file in your theme or plugin, and the custom widget will be available in the WordPress admin area under <strong>"Appearance" > "Widgets"</strong> to be added to widget areas.</p>
+
+<p>You can also explore more advanced concepts like using widget settings API, adding custom controls, implementing AJAX functionality, and more to enhance your custom widget's capabilities.</p>
+
 
       </div>
     </div>
