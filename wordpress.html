@@ -832,66 +832,7 @@ get_footer();
     </div>
     <div id="collapsefive5" class="collapse" aria-labelledby="headingfive5" data-parent="#accordionExample">
       <div class="card-body">
-         <h1>&lt;?php the_title(); ?&gt;</h1>
-
-<div class="post-content">
-  &lt;?php the_content(); ?&gt;
-</div>
-
-<a href="&lt;?php the_permalink(); ?&gt;">Read More</a>
-
-<p>Published on &lt;?php the_date(); ?&gt;</p>
-
-<p>Written by &lt;?php the_author(); ?&gt;</p>
-
-<div class="post-thumbnail">
-  &lt;?php the_post_thumbnail(); ?&gt;
-</div>
-
-&lt;?php get_header(); ?&gt;
-
-&lt;?php get_footer(); ?&gt;
-
-&lt;?php get_sidebar(); ?&gt;
-
-<nav>
-  &lt;?php wp_nav_menu(); ?&gt;
-</nav>
-
-<ul>
-  &lt;?php wp_list_categories(); ?&gt;
-</ul>
-
-<ul>
-  &lt;?php wp_list_pages(); ?&gt;
-</ul>
-
-<div class="post-excerpt">
-  &lt;?php the_excerpt(); ?&gt;
-</div>
-
-<div class="post-tags">
-  &lt;?php the_tags(); ?&gt;
-</div>
-
-<div class="search-form">
-  &lt;?php get_search_form(); ?&gt;
-</div>
-
-<link rel="stylesheet" href="&lt;?php echo get_template_directory_uri(); ?&gt;/style.css">
-
-<link rel="stylesheet" href="&lt;?php echo get_stylesheet_directory_uri(); ?&gt;/custom.css">
-
-&lt;?php
-$meta_value = get_post_meta(get_the_ID(), 'meta_key', true);
-echo $meta_value;
-?&gt;
-
-<script src="&lt;?php echo get_template_directory_uri(); ?&gt;/js/custom.js"></script>
-
-<style src="&lt;?php echo get_stylesheet_directory_uri(); ?&gt;/css/custom.css"></style>
-
-   
+      Coming soon
       </div>
     </div>
   </div>
@@ -906,7 +847,117 @@ echo $meta_value;
     </div>
     <div id="collapsesix6" class="collapse" aria-labelledby="headingsix6" data-parent="#accordionExample">
       <div class="card-body">
-        <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <pre>
+<code>
+<!-- Basic Function -->
+<code class="php">
+function custom_function_name() {
+    // Function code goes here
+}
+</code>
+
+<!-- Function with Parameters -->
+<code class="php">
+function greet_user($name) {
+    echo "Hello, $name!";
+}
+</code>
+
+<!-- Function with Return Value -->
+<code class="php">
+function calculate_sum($num1, $num2) {
+    $sum = $num1 + $num2;
+    return $sum;
+}
+</code>
+
+<!-- Function with Default Parameter -->
+<code class="php">
+function display_message($message = 'Hello World') {
+    echo $message;
+}
+</code>
+
+<!-- Function with Conditional Statements -->
+<code class="php">
+function check_even_odd($number) {
+    if ($number % 2 == 0) {
+        echo "Even";
+    } else {
+        echo "Odd";
+    }
+}
+</code>
+
+<!-- Function with Variable Scope -->
+<code class="php">
+$global_variable = 'Global';
+
+function access_global_variable() {
+    global $global_variable;
+    echo $global_variable;
+}
+</code>
+
+<!-- Function with Callback -->
+<code class="php">
+function process_numbers($numbers, $callback) {
+    foreach ($numbers as $number) {
+        $result = $callback($number);
+        echo $result;
+    }
+}
+
+function square_number($number) {
+    return $number * $number;
+}
+
+$numbers = array(1, 2, 3, 4, 5);
+process_numbers($numbers, 'square_number');
+</code>
+
+<!-- Function as a Method of a Class -->
+<code class="php">
+class CustomClass {
+    public function custom_method() {
+        // Method code goes here
+    }
+}
+</code>
+
+<!-- Function with Hooks -->
+<code class="php">
+function custom_function() {
+    // Function code goes here
+}
+add_action('hook_name', 'custom_function');
+</code>
+
+<!-- Advanced Function with Custom Query -->
+<code class="php">
+function get_custom_posts() {
+    $args = array(
+        'post_type' => 'custom_post_type',
+        'posts_per_page' => 5
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            // Display post content or perform custom actions
+        }
+    }
+
+    wp_reset_postdata();
+}
+</code>
+</code>
+</pre>
+
+<p>These are just some examples of custom functions in WordPress. You can create functions with more complex logic and integrate them into your theme or plugin development as needed.</p>
+
       </div>
     </div>
   </div>
