@@ -778,7 +778,48 @@ get_footer();
     </div>
     <div id="collapsefour4" class="collapse" aria-labelledby="headingfour4" data-parent="#accordionExample">
       <div class="card-body">
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      <iframe width="1220" height="345">
+          <h1>Create Template Files - Basic to Advanced</h1>
+  
+  <h2>Basic Usage:</h2>
+  <ol>
+    <li>Create a new file in your theme directory with the desired template name. For example, to create a template for a single post, create a file named <code>single.php</code>.</li>
+    <li>Add the following code at the beginning of the file to define it as a template file:</li>
+  </ol>
+  
+  <pre>
+    &lt;?php
+    /*
+    Template Name: Custom Template
+    */
+    ?&gt;
+  </pre>
+  
+  <p>Replace "Custom Template" with the desired name for your template.</p>
+  
+  <p>Customize the rest of the file by adding HTML and PHP code to create the desired layout for your template.</p>
+  
+  <p>Save the file, and you can now select this template when editing a page or post in the WordPress admin area.</p>
+  
+  <h2>Advanced Usage:</h2>
+  <ol>
+    <li><strong>Template Hierarchy:</strong> WordPress follows a template hierarchy to determine which template file to use for different types of pages. Understanding the hierarchy allows you to create more specific templates.</li>
+    <li><strong>Custom Post Type Templates:</strong> To create templates for custom post types, use the following naming convention: <code>single-{post-type}.php</code> for single post views and <code>archive-{post-type}.php</code> for archive views. Replace <code>{post-type}</code> with the slug of your custom post type.</li>
+    <li><strong>Template Parts:</strong> You can create reusable template parts to modularize your templates. For example, create files like <code>header.php</code>, <code>footer.php</code>, <code>sidebar.php</code>, etc., and include them where needed using the <code>get_header()</code>, <code>get_footer()</code>, and <code>get_sidebar()</code> functions.</li>
+    <li><strong>Conditional Templates:</strong> Create conditional templates to target specific scenarios. For example, use <code>category-{slug}.php</code> to create a template for a specific category and <code>page-{slug}.php</code> for a specific page. WordPress will automatically load the appropriate template based on the page or category being viewed.</li>
+    <li><strong>Custom Page Templates:</strong> Create custom page templates that are selectable when creating or editing a page in WordPress. Follow these steps:
+      <ul>
+        <li>Create a new file in your theme directory with a unique name and <code>.php</code> extension, e.g., <code>template-custom.php</code>.</li>
+        <li>Add the template header code at the beginning of the file, as mentioned in the basic usage.</li>
+        <li>Customize the file to create the desired layout.</li>
+        <li>In the WordPress admin area, when editing a page, you can select this custom template from the "Page Attributes" section.</li>
+      </ul>
+    </li>
+  </ol>
+  
+  <p>By utilizing the template hierarchy, custom post type templates, template parts, conditional templates, and custom page templates, you can create a variety of template files to control the layout and design of your WordPress theme.</p>
+  
+       </iframe>
       </div>
     </div>
   </div>
