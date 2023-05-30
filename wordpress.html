@@ -832,13 +832,65 @@ get_footer();
     </div>
     <div id="collapsefive5" class="collapse" aria-labelledby="headingfive5" data-parent="#accordionExample">
       <div class="card-body">
-          <ul> 
-              <li><span>the_title():</span> Displays the title of the current post or page.</li>
-          </ul>
-          <p>Example</p>
-          <pre>
-          <h1><?php the_title(); ?></h1>
-          </pre>
+         <h1>&lt;?php the_title(); ?&gt;</h1>
+
+<div class="post-content">
+  &lt;?php the_content(); ?&gt;
+</div>
+
+<a href="&lt;?php the_permalink(); ?&gt;">Read More</a>
+
+<p>Published on &lt;?php the_date(); ?&gt;</p>
+
+<p>Written by &lt;?php the_author(); ?&gt;</p>
+
+<div class="post-thumbnail">
+  &lt;?php the_post_thumbnail(); ?&gt;
+</div>
+
+&lt;?php get_header(); ?&gt;
+
+&lt;?php get_footer(); ?&gt;
+
+&lt;?php get_sidebar(); ?&gt;
+
+<nav>
+  &lt;?php wp_nav_menu(); ?&gt;
+</nav>
+
+<ul>
+  &lt;?php wp_list_categories(); ?&gt;
+</ul>
+
+<ul>
+  &lt;?php wp_list_pages(); ?&gt;
+</ul>
+
+<div class="post-excerpt">
+  &lt;?php the_excerpt(); ?&gt;
+</div>
+
+<div class="post-tags">
+  &lt;?php the_tags(); ?&gt;
+</div>
+
+<div class="search-form">
+  &lt;?php get_search_form(); ?&gt;
+</div>
+
+<link rel="stylesheet" href="&lt;?php echo get_template_directory_uri(); ?&gt;/style.css">
+
+<link rel="stylesheet" href="&lt;?php echo get_stylesheet_directory_uri(); ?&gt;/custom.css">
+
+&lt;?php
+$meta_value = get_post_meta(get_the_ID(), 'meta_key', true);
+echo $meta_value;
+?&gt;
+
+<script src="&lt;?php echo get_template_directory_uri(); ?&gt;/js/custom.js"></script>
+
+<style src="&lt;?php echo get_stylesheet_directory_uri(); ?&gt;/css/custom.css"></style>
+
    
       </div>
     </div>
