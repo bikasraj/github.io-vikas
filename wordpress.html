@@ -129,17 +129,17 @@
                             </ul>
                         </nav>
                         
-<nav>
-<marquee behavior="scroll" direction="left">
-  <a class="moving" href="https://www.example.com" style="color: #00a3e1;">Laravel</a>
-  <a class="moving" href="https://www.example.com" style="color: #e82a2a;">PHP</a>
-  <a class="moving" href="https://www.example.com" style="color: #6ac045;">Javascript</a>
-  <a class="moving" href="https://www.example.com">Angular</a>
-  <a class="moving" href="https://www.example.com" style="color: #d1a71d;">jQuery</a>
-  <a class="moving" href="https://www.example.com" style="color: deeppink;">React js</a>
-  <a class="moving" href="https://www.example.com" style="color: #5078ff;">Python</a>
-</marquee>
-</nav>
+                        <nav>
+                            <marquee behavior="scroll" direction="left">
+                             <a class="moving" href="https://www.example.com" style="color: #00a3e1;">Laravel</a>
+                             <a class="moving" href="https://www.example.com" style="color: #e82a2a;">PHP</a>
+                             <a class="moving" href="https://www.example.com" style="color: #6ac045;">Javascript</a>
+                             <a class="moving" href="https://www.example.com">Angular</a>
+                             <a class="moving" href="https://www.example.com" style="color: #d1a71d;">jQuery</a>
+                             <a class="moving" href="https://www.example.com" style="color: deeppink;">React js</a>
+                             <a class="moving" href="https://www.example.com" style="color: #5078ff;">Python</a>
+                            </marquee>
+                         </nav>
 
                         <!--Nav Footer-->
                         <div class="nav-footer">
@@ -195,38 +195,41 @@
           <h4 class="mb-20"><span> Installation and setup wordpress step by step in localhost</span></h6>
           <p>Here is a step-by-step guide to installing and setting up WordPress on your local machine using a local server environment like XAMPP:</p>
    <ul>
-       <li><span style=" color: #0586b8; ">Download and install XAMPP:</span><br>
+    <li>
+        <span style=" color: #0586b8; ">Download and install XAMPP:</span><br>
            XAMPP is a free and open-source local server environment that allows you to run PHP, MySQL, 
            and Apache on your computer. Download XAMPP from the Apache Friends website and install it on 
            your computer.</li><br><br>
- 	<li><span style=" color: #0586b8; ">Start the Apache and MySQL servers: </span><br><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Start the Apache and MySQL servers: </span><br><br>
         Once XAMPP is installed, start the Apache and MySQL servers by opening the XAMPP Control Panel 
         and clicking on the "Start" buttons next to Apache and MySQL.</li><br><br>
- 	<li><span style=" color: #0586b8; ">Download and extract WordPress:</span><br><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Download and extract WordPress:</span><br><br>
         Download the latest version of WordPress from the WordPress 
         website and extract the contents of the ZIP file to the "htdocs" folder of your XAMPP installation 
         (usually located at "C:\xampp\htdocs").</li><br><br>
- 	<li><span style=" color: #0586b8; ">Create a MySQL database: </span><br><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Create a MySQL database: </span><br><br>
         Open your web browser and go to "<a href="http://localhost/phpmyadmin/" target="_new">http://localhost/phpmyadmin/</a>". 
         Click on the "Databases" tab and enter a name for your database (e.g. "wordpress").
         Click the "Create" button to create the database.</li><br><br>
- 	<li><span style=" color: #0586b8; ">Edit the WordPress configuration file:</span><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Edit the WordPress configuration file:</span><br>
         Navigate to the folder where you extracted the WordPress files 
         and find the "wp-config-sample.php" file. Rename it to "wp-config.php". Open the "wp-config.php" file in a
         text editor and enter the database name, username, and password that you created in the previous step.
         Save the changes.</li><br><br>
- 	<li><span style=" color: #0586b8; ">Install WordPress:</span><br><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Install WordPress:</span><br><br>
         Open your web browser and go to "<a href="http://localhost/wordpress" target="_new">http://localhost/wordpress</a>". 
         Follow the WordPress installation prompts, entering your site title, username, password, and email address as prompted.</li>
- 	<li><span style=" color: #0586b8; ">Log in and customize your site: </span><br><br>
+ 	<li>
+    <span style=" color: #0586b8; ">Log in and customize your site: </span><br><br>
         Once WordPress is installed, log in to the WordPress dashboard by 
         visiting "<a href="http://localhost/wordpress/wp-admin" target="_new">http://localhost/wordpress/wp-admin</a>". 
         From here, you can customize your website by selecting a theme, adding pages and posts, and installing plugins.</li>
 </ul>
-          <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-
-
-
       </div>
     </div>
   </div>
@@ -1319,7 +1322,7 @@ add_action('widgets_init', 'register_custom_widget');
      
 <div class="page-heading">
     <span class="icon"><i class="lnr lnr-book"></i></span>
-    <h2 style="text-aline:center;">Basic Topics:</h2>
+    <h2>Basic Topics:</h2>
 </div>
      
  <div class="accordion" id="accordionExample">
@@ -1449,6 +1452,287 @@ add_action('widgets_init', 'register_custom_widget');
 <!--Blog Content End-->
 </div>
 </div>
+
+<div class="blog-container">
+  <div class="row">
+ <!--Blog Content Start-->
+      
+ <div class="page-heading">
+     <span class="icon"><i class="lnr lnr-book"></i></span>
+     <h2>Intermediate Topics:</h2>
+ </div>
+      
+  <div class="accordion" id="accordionExample">
+      
+   <div class="card">
+     <div class="card-header" id="headingOne11">
+       <h2 class="mb-0">
+         <button class="toggle"  data-toggle="collapse" data-target="#collapseOneplugin" aria-expanded="true" aria-controls="collapseOneplugin">
+          1. Creating a settings page for the plugin
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin" class="collapse show" aria-labelledby="headingOne11" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+      
+   <div class="card">
+     <div class="card-header" id="headingTwo22">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin11" aria-expanded="false" aria-controls="collapseOneplugin11">
+           2.Adding options to customize the label appearance
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin11" class="collapse" aria-labelledby="headingTwo22" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+    
+    <div class="card">
+     <div class="card-header" id="headingThree33">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin111" aria-expanded="false" aria-controls="collapseOneplugin111">
+           3 . Saving and retrieving plugin settings
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin111" class="collapse" aria-labelledby="headingThree33" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+    <div class="card">
+     <div class="card-header" id="headingfour44">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin4" aria-expanded="false" aria-controls="collapseOneplugin4">
+           4 . Implementing localization for multi-language support
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin4" class="collapse" aria-labelledby="headingfour44" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+     
+    <div class="card">
+     <div class="card-header" id="headingfive55">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin5" aria-expanded="false" aria-controls="collapseOneplugin5">
+           5 . Adding support for custom post types or specific post/page templates
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin5" class="collapse" aria-labelledby="headingfive55" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+        <div class="card">
+     <div class="card-header" id="headingsix66">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin6" aria-expanded="false" aria-controls="collapseOneplugin6">
+           6 . Providing shortcode functionality for displaying labels in specific areas
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin6" class="collapse" aria-labelledby="headingsix66" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+  <div class="card">
+     <div class="card-header" id="headingseven77">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin7" aria-expanded="false" aria-controls="collapseOneplugin7">
+           7 . Adding conditionals to control label visibility based on certain criteria
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin7" class="collapse" aria-labelledby="headingseven77" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+   <div class="card">
+     <div class="card-header" id="headingeight88">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseOneplugin8" aria-expanded="false" aria-controls="collapseOneplugin8">
+           8 . Implementing AJAX functionality for dynamic label updates
+         </button>
+       </h2>
+     </div>
+     <div id="collapseOneplugin8" class="collapse" aria-labelledby="headingeight88" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <!--Blog Content End-->
+ </div>
+ </div>
+
+
+ <div class="blog-container">
+  <div class="row">
+ <!--Blog Content Start-->
+      
+ <div class="page-heading">
+     <span class="icon"><i class="lnr lnr-book"></i></span>
+     <h2>Advanced Topics:</h2>
+ </div>
+      
+  <div class="accordion" id="accordionExample">
+      
+   <div class="card">
+     <div class="card-header" id="headingOne11">
+       <h2 class="mb-0">
+         <button class="toggle"  data-toggle="collapse" data-target="#plugin8" aria-expanded="true" aria-controls="plugin8">
+          1. Creating a custom post type to manage labels
+         </button>
+       </h2>
+     </div>
+     <div id="plugin8" class="collapse show" aria-labelledby="headingOne11" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+      
+   <div class="card">
+     <div class="card-header" id="headingTwo22">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin811" aria-expanded="false" aria-controls="plugin811">
+           2.Building a label management interface within the WordPress admin panel
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin811" class="collapse" aria-labelledby="headingTwo22" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+    
+    <div class="card">
+     <div class="card-header" id="headingThree33">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin8111" aria-expanded="false" aria-controls="plugin8111">
+           3 . Implementing a drag-and-drop interface for label reordering
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin8111" class="collapse" aria-labelledby="headingThree33" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+    <div class="card">
+     <div class="card-header" id="headingfour44">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin84" aria-expanded="false" aria-controls="plugin84">
+           4 . Creating label groups or categories for better organization
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin84" class="collapse" aria-labelledby="headingfour44" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+     
+    <div class="card">
+     <div class="card-header" id="headingfive55">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin85" aria-expanded="false" aria-controls="plugin85">
+           5 . Integrating with third-party APIs to fetch dynamic label content
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin85" class="collapse" aria-labelledby="headingfive55" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+        <div class="card">
+     <div class="card-header" id="headingsix66">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin86" aria-expanded="false" aria-controls="plugin86">
+           6 .Implementing role-based access control for label management
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin86" class="collapse" aria-labelledby="headingsix66" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+  <div class="card">
+     <div class="card-header" id="headingseven77">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin87" aria-expanded="false" aria-controls="plugin87">
+           7 . Extending label functionality through plugin hooks and actions
+
+         </button>
+       </h2>
+     </div>
+     <div id="plugin87" class="collapse" aria-labelledby="headingseven77" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+      
+   <div class="card">
+     <div class="card-header" id="headingeight88">
+       <h2 class="mb-0">
+         <button class="toggle" type="button" data-toggle="collapse" data-target="#plugin88" aria-expanded="false" aria-controls="plugin88">
+           8 . Implementing automated tests for plugin functionality
+         </button>
+       </h2>
+     </div>
+     <div id="plugin88" class="collapse" aria-labelledby="headingeight88" data-parent="#accordionExample">
+       <div class="card-body">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <!--Blog Content End-->
+ </div>
+ </div>
 
 </div>
 </section>
