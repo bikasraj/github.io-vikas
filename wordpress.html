@@ -1337,43 +1337,59 @@ add_action('widgets_init', 'register_custom_widget');
     </div>
     <div id="collapseOne11" class="collapse show" aria-labelledby="headingOne11" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <p>Create a plugin folder: In your local server's web directory (e.g., htdocs in XAMPP or htdocs in MAMP), create a new folder to hold your plugin files. Give it a descriptive name (e.g., my-plugin).</p>
+
+<p>Create the main plugin file: Inside your plugin folder, create a PHP file that will serve as the main file of your plugin. This file should have a unique name and end with the .php extension (e.g., my-plugin.php).</p>
+
+<p>Add plugin headers: Open the main plugin file (my-plugin.php) in your code editor and add the necessary plugin headers at the top. Here's an example:</p>
+
+<pre>
+<code>&lt;?php
+/**
+ * Plugin Name: My Plugin
+ * Plugin URI: https://example.com/my-plugin
+ * Description: This is a custom plugin for WordPress.
+ * Version: 1.0.0
+ * Author: Your Name
+ * Author URI: https://example.com
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: my-plugin
+ * Domain Path: /languages
+ */
+
+// Plugin code goes here...
+
+// Example function
+function my_plugin_custom_function() {
+    // Function code here...
+}
+
+// Example action hook
+function my_plugin_custom_action() {
+    // Action code here...
+}
+add_action('init', 'my_plugin_custom_action');
+
+</code>
+</pre>
+
+<p>Make sure to update the plugin headers with your plugin's information.</p>
+
+<p>Start coding your plugin: Begin writing your plugin code below the plugin headers in the main plugin file. You can define functions, hooks, and other functionalities based on your plugin's requirements.</p>
+
+<p>Test your plugin: To test your plugin, start the local server environment and access your WordPress installation in a web browser. Install and activate your plugin from the WordPress admin dashboard (Plugins -> Add New -> Upload Plugin).</p>
+
+<p>Repeat and refine: Continue developing and refining your plugin code as needed. Test the plugin's functionality, handle errors, and iterate on your code until you achieve the desired results.</p>
+
+<p>By following these steps, you'll have a basic development environment set up for creating WordPress plugins. Remember to consult the WordPress Plugin Handbook (<a href="https://developer.wordpress.org/plugins/">https://developer.wordpress.org/plugins/</a>) for best practices, guidelines, and more advanced topics related to WordPress plugin development.</p>
+
       </div>
     </div>
   </div>
+  
      
-     
-  <div class="card">
-    <div class="card-header" id="headingTwo22">
-      <h2 class="mb-0">
-        <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
-          2.Creating the main plugin file
-        </button>
-      </h2>
-    </div>
-    <div id="collapseTwo22" class="collapse" aria-labelledby="headingTwo22" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-   
-   <div class="card">
-    <div class="card-header" id="headingThree33">
-      <h2 class="mb-0">
-        <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseThree33" aria-expanded="false" aria-controls="collapseThree33">
-          3 . Adding the plugin header information
-        </button>
-      </h2>
-    </div>
-    <div id="collapseThree33" class="collapse" aria-labelledby="headingThree33" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-     
-   <div class="card">
+    <div class="card">
     <div class="card-header" id="headingfour44">
       <h2 class="mb-0">
         <button class="toggle" type="button" data-toggle="collapse" data-target="#collapsefour44" aria-expanded="false" aria-controls="collapsefour44">
@@ -1383,10 +1399,580 @@ add_action('widgets_init', 'register_custom_widget');
     </div>
     <div id="collapsefour44" class="collapse" aria-labelledby="headingfour44" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          
+          <p>In WordPress, action hooks and filter hooks are essential components of the plugin and theme development process. They allow you to modify and extend the functionality of WordPress without directly modifying its core files. Here's a brief explanation of action hooks and filter hooks:</p>
+
+<h3>Action Hooks:</h3>
+<ul>
+  <li>Action hooks allow you to execute custom code at specific points throughout the WordPress execution process.</li>
+  <li>They provide a way to add or run functions or code when a particular event or action occurs.</li>
+  <li>Action hooks are usually denoted by the <code>do_action()</code> function, which triggers the hook.</li>
+  <li>You can create your own custom action hooks or utilize the predefined action hooks available in WordPress core and plugins.</li>
+  <li>Actions can be used to perform tasks such as adding new functionality, modifying content, or executing custom code at specific events.</li>
+  <li>Example: The <code>init</code> action hook is triggered when WordPress has finished initializing, and it allows you to execute code at that point.</li>
+</ul>
+
+<h3>Filter Hooks:</h3>
+<ul>
+  <li>Filter hooks enable you to modify or manipulate data before it is displayed or used by WordPress.</li>
+  <li>They provide a way to modify the output or behavior of functions by passing data through custom functions or methods.</li>
+  <li>Filter hooks are usually denoted by the <code>apply_filters()</code> function, which applies the filter to the specified data.</li>
+  <li>Filters can be used to modify content, change settings, or alter the behavior of various WordPress components.</li>
+  <li>Example: The <code>the_content</code> filter hook allows you to modify the content of a post before it is displayed.</li>
+</ul>
+
+<h3>Using Action and Filter Hooks:</h3>
+
+<h4>Adding an Action Hook:</h4>
+<pre><code>&lt;?php
+// Define a custom action hook
+do_action('my_custom_action');
+
+// Add a function to be executed when the custom action occurs
+add_action('my_custom_action', 'my_custom_function');
+
+// Define the custom function
+function my_custom_function() {
+    // Custom code to be executed
+}
+?&gt;</code></pre>
+
+<h4>Adding a Filter Hook:</h4>
+<pre><code>&lt;?php
+// Define a custom filter hook
+$filtered_data = apply_filters('my_custom_filter', $data);
+
+// Add a function to modify the filtered data
+add_filter('my_custom_filter', 'my_custom_function');
+
+// Define the custom function to modify the data
+function my_custom_function($data) {
+    // Modify the data
+    return $modified_data;
+}
+?&gt;</code></pre>
+
+<p>By utilizing action hooks and filter hooks, you can extend and customize the functionality of WordPress in a modular and flexible way, ensuring that your modifications are separate from the core codebase and easily maintainable.</p>
+
+          
+      </div>
+    </div>
+  </div>   
+     
+     
+  <div class="card">
+    <div class="card-header" id="headingTwo22">
+      <h2 class="mb-0">
+        <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
+          3. 10 Example of Action hook 
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo22" class="collapse" aria-labelledby="headingTwo22" data-parent="#accordionExample">
+      <div class="card-body">
+          <ol>
+<li><code>init</code> action hook: Executing code after WordPress has finished initialization.</li>
+<pre><code>&lt;?php
+add_action('init', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed
+}
+?&gt;</code></pre>
+
+<li><code>wp_head</code> action hook: Adding code to the head section of the website.</li>
+<pre><code>&lt;?php
+add_action('wp_head', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be added to the head section
+}
+?&gt;</code></pre>
+
+<li><code>wp_footer</code> action hook: Adding code to the footer section of the website.</li>
+<pre><code>&lt;?php
+add_action('wp_footer', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be added to the footer section
+}
+?&gt;</code></pre>
+
+<li><code>wp_enqueue_scripts</code> action hook: Enqueuing scripts and stylesheets on the front-end.</li>
+<pre><code>&lt;?php
+add_action('wp_enqueue_scripts', 'my_custom_function');
+function my_custom_function() {
+    // Enqueue scripts and stylesheets
+}
+?&gt;</code></pre>
+
+<li><code>admin_init</code> action hook: Executing code after the admin area has finished initialization.</li>
+<pre><code>&lt;?php
+add_action('admin_init', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed in the admin area
+}
+?&gt;</code></pre>
+
+<li><code>admin_menu</code> action hook: Adding custom menus and submenus to the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_menu', 'my_custom_function');
+function my_custom_function() {
+    // Add menus and submenus
+}
+?&gt;</code></pre>
+
+<li><code>save_post</code> action hook: Executing code after a post is saved or updated.</li>
+<pre><code>&lt;?php
+add_action('save_post', 'my_custom_function');
+function my_custom_function($post_id) {
+    // Custom code to be executed after post save/update
+}
+?&gt;</code></pre>
+
+<li><code>wp_login</code> action hook: Executing code after a user successfully logs in.</li>
+<pre><code>&lt;?php
+add_action('wp_login', 'my_custom_function', 10, 2);
+function my_custom_function($user_login, $user) {
+    // Custom code to be executed after user login
+}
+?&gt;</code></pre>
+
+<li><code>admin_notices</code> action hook: Displaying custom notices in the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_notices', 'my_custom_function');
+function my_custom_function() {
+    // Display admin notices
+}
+?&gt;</code></pre>
+
+<li><code>template_redirect</code> action hook: Redirecting users to a different template or URL.</li>
+<pre><code>&lt;?php
+add_action('template_redirect', 'my_custom_function');
+function my_custom_function() {
+    // Custom redirection code
+}
+?&gt;</code></pre>
+
+<li><code>wp_logout</code> action hook: Executing code after a user logs out.</li>
+<pre><code>&lt;?php
+add_action('wp_logout', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed after user
+
+ logout
+}
+?&gt;</code></pre>
+
+<li><code>widgets_init</code> action hook: Registering custom widgets.</li>
+<pre><code>&lt;?php
+add_action('widgets_init', 'my_custom_function');
+function my_custom_function() {
+    // Register custom widgets
+}
+?&gt;</code></pre>
+
+<li><code>after_setup_theme</code> action hook: Executing code after the theme has finished setting up.</li>
+<pre><code>&lt;?php
+add_action('after_setup_theme', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed after theme setup
+}
+?&gt;</code></pre>
+
+<li><code>pre_get_posts</code> action hook: Modifying the query before fetching posts.</li>
+<pre><code>&lt;?php
+add_action('pre_get_posts', 'my_custom_function');
+function my_custom_function($query) {
+    // Modify the query
+}
+?&gt;</code></pre>
+
+<li><code>admin_enqueue_scripts</code> action hook: Enqueuing scripts and stylesheets in the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_enqueue_scripts', 'my_custom_function');
+function my_custom_function($hook_suffix) {
+    // Enqueue admin scripts and stylesheets
+}
+?&gt;</code></pre>
+
+<li><code>wp_ajax_my_action</code> action hook: Handling AJAX requests from the front-end.</li>
+<pre><code>&lt;?php
+add_action('wp_ajax_my_action', 'my_custom_function');
+function my_custom_function() {
+    // Handle AJAX request
+}
+?&gt;</code></pre>
+
+<li><code>wp_ajax_nopriv_my_action</code> action hook: Handling AJAX requests from the front-end for non-logged-in users.</li>
+<pre><code>&lt;?php
+add_action('wp_ajax_nopriv_my_action', 'my_custom_function');
+function my_custom_function() {
+    // Handle AJAX request for non-logged-in users
+}
+?&gt;</code></pre>
+
+<li><code>admin_head</code> action hook: Adding code to the head section of the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_head', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be added to the admin head section
+}
+?&gt;</code></pre>
+
+<li><code>admin_footer</code> action hook: Adding code to the footer section of the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_footer', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be added to the admin footer section
+}
+?&gt;</code></pre>
+
+<li><code>wp_dashboard_setup</code> action hook: Adding custom widgets to the WordPress dashboard.</li>
+<pre><code>&lt;?php
+add_action('wp_dashboard_setup', 'my_custom_function');
+function my_custom_function() {
+    // Add custom dashboard widgets
+}
+?&gt;</code></pre>
+
+<li><code>edit_category</code> action hook: Executing code after a category is edited.</li>
+<pre><code>&lt;?php
+add_action('edit_category', 'my_custom_function');
+function my_custom_function($category_id) {
+    // Custom code to be executed after category edit
+}
+?&gt;</code></pre>
+
+<li><code>wp_insert_post</code> action hook: Executing code after a post is inserted.</li>
+<pre><code>&lt;?php
+add_action('wp_insert_post', 'my_custom_function',
+
+ 10, 3);
+function my_custom_function($post_id, $post, $update) {
+    // Custom code to be executed after post insert
+}
+?&gt;</code></pre>
+
+<li><code>transition_post_status</code> action hook: Executing code when a post transitions between statuses.</li>
+<pre><code>&lt;?php
+add_action('transition_post_status', 'my_custom_function', 10, 3);
+function my_custom_function($new_status, $old_status, $post) {
+    // Custom code to be executed on post status transition
+}
+?&gt;</code></pre>
+
+<li><code>admin_action_my_action</code> action hook: Handling custom actions in the admin area.</li>
+<pre><code>&lt;?php
+add_action('admin_action_my_action', 'my_custom_function');
+function my_custom_function() {
+    // Handle custom admin action
+}
+?&gt;</code></pre>
+
+<li><code>wp_insert_comment</code> action hook: Executing code after a comment is inserted.</li>
+<pre><code>&lt;?php
+add_action('wp_insert_comment', 'my_custom_function', 10, 2);
+function my_custom_function($comment_id, $comment_object) {
+    // Custom code to be executed after comment insert
+}
+?&gt;</code></pre>
+
+<li><code>admin_init</code> action hook: Executing code after the admin area has finished initialization.</li>
+<pre><code>&lt;?php
+add_action('admin_init', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed in the admin area
+}
+?&gt;</code></pre>
+
+<li><code>publish_post</code> action hook: Executing code after a post is published.</li>
+<pre><code>&lt;?php
+add_action('publish_post', 'my_custom_function', 10, 2);
+function my_custom_function($post_id, $post) {
+    // Custom code to be executed after post publish
+}
+?&gt;</code></pre>
+
+<li><code>edit_user_profile</code> action hook: Adding custom fields to the user profile edit screen.</li>
+<pre><code>&lt;?php
+add_action('edit_user_profile', 'my_custom_function');
+function my_custom_function($user) {
+    // Add custom fields to user profile
+}
+?&gt;</code></pre>
+
+<li><code>user_register</code> action hook: Executing code after a user registers on the site.</li>
+<pre><code>&lt;?php
+add_action('user_register', 'my_custom_function');
+function my_custom_function($user_id) {
+    // Custom code to be executed after user registration
+}
+?&gt;</code></pre>
+
+<li><code>shutdown</code> action hook: Executing code just before the PHP script execution ends.</li>
+<pre><code>&lt;?php
+add_action('shutdown', 'my_custom_function');
+function my_custom_function() {
+    // Custom code to be executed before script ends
+}
+?&gt;</code></pre>
+</ol>
+
+These are just a few examples of action hooks in WordPress. There are many more hooks available for different purposes.
       </div>
     </div>
   </div>
+   
+   <div class="card">
+    <div class="card-header" id="headingThree33">
+      <h2 class="mb-0">
+        <button class="toggle" type="button" data-toggle="collapse" data-target="#collapseThree33" aria-expanded="false" aria-controls="collapseThree33">
+          4 . 10 Example of filter hook
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree33" class="collapse" aria-labelledby="headingThree33" data-parent="#accordionExample">
+      <div class="card-body">
+          <p>Here are 30 examples of filter hooks in WordPress:</p>
+<ol>
+  <li>
+    <code>the_content</code> filter hook: Modifying the content of a post or page.<br>
+    <pre><code>add_filter('the_content', 'my_custom_function');
+function my_custom_function($content) {
+    // Modify the content
+    return $content;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_title</code> filter hook: Modifying the title of a post or page.<br>
+    <pre><code>add_filter('the_title', 'my_custom_function');
+function my_custom_function($title) {
+    // Modify the title
+    return $title;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_excerpt</code> filter hook: Modifying the excerpt of a post.<br>
+    <pre><code>add_filter('the_excerpt', 'my_custom_function');
+function my_custom_function($excerpt) {
+    // Modify the excerpt
+    return $excerpt;
+}</code></pre>
+  </li>
+  <li>
+    <code>widget_text_content</code> filter hook: Modifying the content of a text widget.<br>
+    <pre><code>add_filter('widget_text_content', 'my_custom_function');
+function my_custom_function($content) {
+    // Modify the widget content
+    return $content;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_nav_menu_items</code> filter hook: Modifying the items in a navigation menu.<br>
+    <pre><code>add_filter('wp_nav_menu_items', 'my_custom_function');
+function my_custom_function($items) {
+    // Modify the menu items
+    return $items;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_author</code> filter hook: Modifying the author's name.<br>
+    <pre><code>add_filter('the_author', 'my_custom_function');
+function my_custom_function($author) {
+    // Modify the author name
+    return $author;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_date</code> filter hook: Modifying the date of a post.<br>
+    <pre><code>add_filter('the_date', 'my_custom_function');
+function my_custom_function($date) {
+    // Modify the post date
+    return $date;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_category</code> filter hook: Modifying the categories of a post.<br>
+    <pre><code>add_filter('the_category', 'my_custom_function');
+function my_custom_function($categories) {
+    // Modify the categories
+    return $categories;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_tags</code> filter hook: Modifying the tags of a post.<br>
+    <pre><code>add_filter('the_tags', 'my_custom_function');
+function my_custom_function($tags) {
+    // Modify the tags
+    return $tags;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_archive_title</code> filter hook: Modifying the title of an archive page.<br>
+    <pre><code>add_filter('the_archive_title', 'my_custom_function');
+function my_custom_function($title) {
+    // Modify the archive title
+    return $title;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_post_thumbnail_caption</code> filter hook: Modifying the caption of a post thumbnail.<br>
+    <pre><code>add_filter('the_post_thumbnail_caption', 'my_custom_function');
+function my_custom_function($caption) {
+    // Modify the thumbnail caption
+    return $caption;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_get_attachment_image_attributes</code> filter hook: Modifying the attributes of an image attachment.<br>
+    <pre><code>add_filter('wp_get_attachment_image_attributes', 'my_custom_function');
+function my_custom_function($attributes) {
+    // Modify the image attributes
+    return $attributes;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_category_list</code> filter hook: Modifying the category list of a post.<br>
+    <pre><code>add_filter('the_category_list', 'my_custom_function');
+function my_custom_function($category_list) {
+    // Modify the category list
+    return $category_list;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_archive_description</code> filter hook: Modifying the description of an archive page.<br>
+    <pre><code>add_filter('the_archive_description', 'my_custom_function');
+function my_custom_function($description) {
+    // Modify the archive description
+    return $description;
+}</code></pre>
+  </li>
+  <li>
+    <code>widget_title</code> filter hook: Modifying the title of a widget.<br>
+    <pre><code>add_filter('widget_title', 'my_custom_function');
+function my_custom_function($title) {
+    // Modify the widget title
+    return $title;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_page_menu_args</code> filter hook: Modifying the arguments of the page menu.<br>
+    <pre><code>add_filter('wp_page_menu_args', 'my_custom_function');
+function my_custom_function($args) {
+    // Modify the page menu arguments
+    return $args;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_permalink</code> filter hook: Modifying the permalink of a post.<br>
+    <pre><code>add_filter('the_permalink', 'my_custom_function');
+function my_custom_function($permalink) {
+    // Modify the post permalink
+    return $permalink;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_time</code> filter hook: Modifying the time of a post.<br>
+    <pre><code>add_filter('the_time', 'my_custom_function');
+function my_custom_function($time) {
+    // Modify the post time
+    return $time;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_nav_menu</code> filter hook: Modifying the arguments of a navigation menu.<br>
+    <pre><code>add_filter('wp_nav_menu', 'my_custom_function');
+function my_custom_function($args) {
+    // Modify the menu arguments
+    return $args;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_search_query</code> filter hook: Modifying the search query.<br>
+    <pre><code>add_filter('the_search_query', 'my_custom_function');
+function my_custom_function($query) {
+    // Modify the search query
+    return $query;
+}</code></pre>
+  </li>
+  <li>
+    <code>widget_text_content</code> filter hook: Modifying the content of a text widget.<br>
+    <pre><code>add_filter('widget_text_content', 'my_custom_function');
+function my_custom_function($content) {
+    // Modify the widget content
+    return $content;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_list_categories</code> filter hook: Modifying the arguments of the category list.<br>
+    <pre><code>add_filter('wp_list_categories', 'my_custom_function');
+function my_custom_function($args) {
+    // Modify the category list arguments
+    return $args;
+}</code></pre>
+  </li>
+  <li>
+    <code>get_the_excerpt</code> filter hook: Modifying the excerpt of a post.<br>
+    <pre><code>add_filter('get_the_excerpt', 'my_custom_function');
+function my_custom_function($excerpt) {
+    // Modify the excerpt
+    return $excerpt;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_tags</code> filter hook: Modifying the tags of a post.<br>
+    <pre><code>add_filter('the_tags', 'my_custom_function');
+function my_custom_function($tags) {
+    // Modify the tags
+    return $tags;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_list_pages</code> filter hook: Modifying the arguments of the page list.<br>
+    <pre><code>add_filter('wp_list_pages', 'my_custom_function');
+function my_custom_function($args) {
+    // Modify the page list arguments
+    return $args;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_date</code> filter hook: Modifying the date of a post.<br>
+    <pre><code>add_filter('the_date', 'my_custom_function');
+function my_custom_function($date) {
+    // Modify the post date
+    return $date;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_category</code> filter hook: Modifying the categories of a post.<br>
+    <pre><code>add_filter('the_category', 'my_custom_function');
+function my_custom_function($categories) {
+    // Modify the categories
+    return $categories;
+}</code></pre>
+  </li>
+  <li>
+    <code>the_content_feed</code> filter hook: Modifying the content for RSS feeds.<br>
+    <pre><code>add_filter('the_content_feed', 'my_custom_function');
+function my_custom_function($content) {
+    // Modify the content for feeds
+    return $content;
+}</code></pre>
+  </li>
+  <li>
+    <code>wp_list_comments_args</code> filter hook: Modifying the arguments of the comment list.<br>
+    <pre><code>add_filter('wp_list_comments_args', 'my_custom_function');
+function my_custom_function($args) {
+    // Modify the comment list arguments
+    return $args;
+}</code></pre>
+  </li>
+</ol>
+
+These examples demonstrate how you can use filter hooks to modify various aspects of WordPress content, menus, widgets, and more.
+
+      </div>
+    </div>
+  </div>
+    
     
    <div class="card">
     <div class="card-header" id="headingfive55">
