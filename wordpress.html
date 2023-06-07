@@ -1984,7 +1984,74 @@ These examples demonstrate how you can use filter hooks to modify various aspect
     </div>
     <div id="collapsefive55" class="collapse" aria-labelledby="headingfive55" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <p>To create a basic function that adds custom labels using an action hook, follow these steps:</p>
+          <p>Determine the appropriate action hook: Identify the action hook where you want to add the custom labels. For example, let's use the <code>init</code> action hook, which is commonly used for initializing WordPress.</p>
+
+<p>Create a custom function: Define a custom function that will be executed when the action hook is triggered. In this function, you can use the <code>register_post_type()</code> function to add custom labels to a post type.</p>
+
+<pre><code>&lt;?php
+function custom_add_labels() {
+    $labels = array(
+        'name' =&gt; 'Custom Posts',
+        'singular_name' =&gt; 'Custom Post',
+        'add_new' =&gt; 'Add New Custom Post',
+        'add_new_item' =&gt; 'Add New Custom Post',
+        'edit_item' =&gt; 'Edit Custom Post',
+        'new_item' =&gt; 'New Custom Post',
+        'view_item' =&gt; 'View Custom Post',
+        'search_items' =&gt; 'Search Custom Posts',
+        'not_found' =&gt; 'No custom posts found',
+        'not_found_in_trash' =&gt; 'No custom posts found in trash',
+        'parent_item_colon' =&gt; 'Parent Custom Post:',
+        'menu_name' =&gt; 'Custom Posts'
+    );
+
+    $args = array(
+        'labels' =&gt; $labels,
+        // Add other arguments as per your requirements
+    );
+
+    register_post_type('custom_post_type', $args);
+}
+?&gt;</code></pre>
+
+<p>Hook into the action: Use the <code>add_action()</code> function to hook your custom function into the <code>init</code> action hook.</p>
+
+<pre><code>&lt;?php
+add_action('init', 'custom_add_labels');
+?&gt;</code></pre>
+
+<p>Place the code in the appropriate location: You can add the <code>add_action()</code> function and the custom function either in your theme's <code>functions.php</code> file or in your custom plugin file.</p>
+
+<p>That's it! When the <code>init</code> action hook is triggered during WordPress initialization, your custom function <code>custom_add_labels()</code> will be executed, registering a new post type with the specified custom labels.</p>
+
+<p>This code defines a custom function called <code>custom_add_labels()</code> and hooks it into the <code>init</code> action using the <code>add_action()</code> function. Let's go through each part of the code to understand its purpose:</p>
+
+<p><strong>The <code>custom_add_labels()</code> function:</strong></p>
+
+<ul>
+  <li>This function is responsible for registering a custom post type with custom labels.</li>
+  <li>It defines an array called <code>$labels</code> that contains various labels for the custom post type. These labels include the name, singular name, add new label, edit label, and more. You can customize these labels as per your requirements.</li>
+  <li>It defines an array called <code>$args</code> that stores the arguments for registering the custom post type. The <code>labels</code> argument is set to the <code>$labels</code> array, which provides the custom labels for the post type. You can also add additional arguments to customize the behavior of the custom post type, such as <code>public</code>, <code>supports</code>, <code>taxonomies</code>, etc.</li>
+</ul>
+
+<p><strong>The <code>add_action()</code> function:</strong></p>
+
+<ul>
+  <li>This function is used to hook the <code>custom_add_labels()</code> function into the <code>init</code> action.</li>
+  <li>The <code>init</code> action is triggered during the WordPress initialization process.</li>
+  <li>By hooking the <code>custom_add_labels()</code> function into the <code>init</code> action, it ensures that the function is executed at the right time to register the custom post type.</li>
+</ul>
+
+<p><strong>The <code>register_post_type()</code> function:</strong></p>
+
+<ul>
+  <li>Inside the <code>custom_add_labels()</code> function, the <code>register_post_type()</code> function is used to register the custom post type.</li>
+  <li>It takes two arguments: the post type slug (in this case, <code>'custom_post_type'</code>) and the arguments array (<code>$args</code>) that contains the custom labels and other configuration settings for the post type.</li>
+</ul>
+
+<p>When this code is executed, it will register a custom post type called "Custom Posts" with the specified custom labels and any additional arguments you include in the <code>$args</code> array. You can place this code in your theme's <code>functions.php</code> file or in a custom plugin file to create the custom post type during WordPress initialization.</p>
+
       </div>
     </div>
   </div>
@@ -1999,7 +2066,38 @@ These examples demonstrate how you can use filter hooks to modify various aspect
     </div>
     <div id="collapsesix66" class="collapse" aria-labelledby="headingsix66" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <p>To hook the label function to appropriate action or filter hooks, you can use the WordPress functions <code>add_action()</code> and <code>add_filter()</code>. Here's an example of how you can hook the label function to a specific action hook and a filter hook:</p>
+
+<pre><code>&lt;?php
+// Hook the label function to the 'init' action hook
+add_action('init', 'custom_add_labels');
+
+// Hook the label function to the 'the_title' filter hook
+add_filter('the_title', 'custom_modify_title');
+
+// Custom function to add custom labels
+function custom_add_labels() {
+    // Your label function code here
+    // ...
+}
+
+// Custom function to modify the title
+function custom_modify_title($title) {
+    // Your title modification code here
+    // ...
+
+    return $title;
+}
+?&gt;</code></pre>
+
+<p>In the example above, <code>custom_add_labels()</code> is hooked to the 'init' action hook using <code>add_action()</code>. This means that the <code>custom_add_labels()</code> function will be executed when the 'init' action is triggered during WordPress initialization.</p>
+
+<p>Similarly, <code>custom_modify_title()</code> is hooked to the 'the_title' filter hook using <code>add_filter()</code>. This means that the <code>custom_modify_title()</code> function will be called when the 'the_title' filter is applied, allowing you to modify the title output.</p>
+
+<p>You can replace 'init' and 'the_title' with the appropriate action or filter hooks where you want to execute your custom label function. Additionally, you can define your own custom functions (<code>custom_modify_title()</code> in this example) to perform specific modifications or actions based on the hooks you're using.</p>
+
+<p>Remember to place these hooking statements in your theme's <code>functions.php</code> file or in a custom plugin file.</p>
+
       </div>
     </div>
   </div>
@@ -2014,8 +2112,49 @@ These examples demonstrate how you can use filter hooks to modify various aspect
     </div>
     <div id="collapseseven77" class="collapse" aria-labelledby="headingseven77" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
+<h3>Step 1: Define a custom function to retrieve the custom label:</h3>
+<pre><code>&lt;?php
+function get_custom_label() {
+    // Customize this function to retrieve the desired label
+    $custom_label = 'My Custom Label';
+    
+    return $custom_label;
+}
+?&gt;
+</code></pre>
+<p>In this function, you can customize the logic to retrieve the label. For example, you might fetch it from a database, fetch it from a settings page, or generate it dynamically based on certain conditions.</p>
+<h3>Step 2: Display the custom label within a template file:</h3>
+<pre><code>&lt;?php
+// Get the custom label using the function you defined
+$custom_label = get_custom_label();
+
+// Display the custom label
+echo '&lt;h1&gt;' . $custom_label . '&lt;/h1&gt;';
+?&gt;
+</code></pre>
+<p>Place this code within the appropriate template file, such as <code>header.php</code>, <code>single.php</code>, or any other template file where you want to display the label. The <code>&lt;h1&gt;</code> tag is used here as an example. You can use any HTML markup or CSS styling to format the label as needed.</p>
+<p>Alternatively, if you prefer to use hooks, follow these steps:</p>
+<h3>Step 1: Define a custom function to retrieve the custom label (same as in Step 1 above).</h3>
+<h3>Step 2: Hook the custom function to a filter hook to display the label:</h3>
+<pre><code>&lt;?php
+// Hook a custom function to the 'the_content' filter
+add_filter('the_content', 'display_custom_label');
+
+// Custom function to display the custom label
+function display_custom_label($content) {
+    // Get the custom label using the function you defined
+    $custom_label = get_custom_label();
+
+    // Append the custom label to the content
+    $content .= '&lt;h1&gt;' . $custom_label . '&lt;/h1&gt;';
+
+    // Return the modified content
+    return $content;
+}
+?&gt;
+</code></pre>
+<p>In this example, the <code>display_custom_label()</code> function is hooked to the <code>the_content</code> filter. It retrieves the custom label using the <code>get_custom_label()</code> function, appends it to the content of the post or page, and returns the modified content. This will display the custom label wherever the <code>the_content</code> filter is applied.</p>
+<p>Remember to customize the <code>get_custom_label()</code> function to retrieve the desired label according to your specific requirements.</p>      </div>
     </div>
   </div>
      
@@ -2029,8 +2168,40 @@ These examples demonstrate how you can use filter hooks to modify various aspect
     </div>
     <div id="collapseeight88" class="collapse" aria-labelledby="headingeight88" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
+Step 1: Create a CSS file:
+Create a new CSS file, for example, "custom-label-styles.css", and add your custom styles to it. For demonstration purposes, let's assume you want to customize the appearance of the custom label by changing its font color and background color:
+
+css
+Copy code
+.custom-label {
+    color: #ff0000; /* Red font color */
+    background-color: #f5f5f5; /* Light gray background color */
+}
+Step 2: Enqueue the CSS file:
+In your theme's functions.php file, or in a custom plugin file, enqueue the CSS file using the wp_enqueue_style() function. This will ensure that the styles are loaded on the front end:
+
+php
+Copy code
+function enqueue_custom_label_styles() {
+    // Enqueue the custom label styles
+    wp_enqueue_style('custom-label-styles', get_template_directory_uri() . '/path/to/custom-label-styles.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_label_styles');
+Make sure to replace /path/to/custom-label-styles.css with the correct path to your CSS file.
+
+Step 3: Apply the CSS class to the custom label:
+In the code where you are displaying the custom label, add the CSS class custom-label to the HTML element containing the label. This will apply the custom styles to the label:
+
+php
+Copy code
+// Get the custom label using the function you defined
+$custom_label = get_custom_label();
+
+// Display the custom label with the custom CSS class
+echo '<h1 class="custom-label">' . $custom_label . '</h1>';
+By adding the custom-label class to the <h1> element in this example, the label will inherit the styles defined in the "custom-label-styles.css" file.
+
+Remember to adjust the CSS selectors and properties in the CSS file to match your specific styling requirements.      </div>
     </div>
   </div>
 </div>
